@@ -1,3 +1,4 @@
+
 public class hello {
     public void Primitive_Data_Types(){
         boolean isJavaShit= false;
@@ -53,6 +54,28 @@ public class hello {
         System.out.print("Hello, "+name+"!");
     }
 
+    static void Prime(int n){
+        if(n == 1){
+            System.out.println(n + " is not a prime number.");
+        }else{
+            int count = 0;
+            for(int i = 2; i<= Math.sqrt(n); i++){
+                if(n % i == 0){
+                    count++;
+                }
+            }
+            if(count == 0){
+                System.out.println(n + " is a prime number.");
+            } else{
+                System.out.println(n + " is not a prime number.");
+            }
+        }
+    }
+
+    static void PrimeRange(int start, int end){
+        
+    }
+
     public static void main(String[] args) {
         // creating an object
         hello obj1=new hello();
@@ -67,8 +90,18 @@ public class hello {
         // int add=obj1.Add(4, 3);
 
         // System.out.print(add);
-        greet("VIshnu");
+        // greet("VIshnu");
         // System.out.println("Hello, CodeOSS Java!");
         // System.out.print(hello.staticVar);
+        
+        int[] arr = {1,2,3,3,3,4,4,4,5,5,5,6};
+
+        //int res = RemoveDuplicates.removeDuplicatesTP(arr);
+
+        //System.out.println("Is Array Sorted: " + IsSorted.isSorted(arr));
+
+        Prime(4);
+        // System.out.println(arr.hashCode());
+        // RotateArrays.traverseArray(arr);
     }
 }
