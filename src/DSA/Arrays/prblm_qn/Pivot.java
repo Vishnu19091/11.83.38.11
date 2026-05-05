@@ -1,3 +1,5 @@
+package DSA.Arrays.prblm_qn;
+
 public class Pivot {
     public static int findPivot(int[] arr){
         int total_sum = 0;

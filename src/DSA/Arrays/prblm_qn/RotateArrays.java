@@ -1,10 +1,10 @@
 package DSA.Arrays.prblm_qn;
+import DSA.Arrays.PracticeArray;
 
 public class RotateArrays{
   /**
    * For the rotateOne & rotate method
    * the time complexity is O(k*n) because performing k rotation
-   *
    * Calling the rotateOne Method inside the rotate Method
    */
 
@@ -15,9 +15,9 @@ public class RotateArrays{
     int tmp = arr[0];
 
     // iterate the array from 1st index
-    // and shift the array elements to left
+    // and shift the array elements (adjacent)
     for (int i = 1; i < n; i++){
-      arr[i-1] = arr[i];
+      arr[i-1] = arr[i]; // (adjacent)
     }
     // after shifting the elements update the last element with the first one
     arr[n - 1] = tmp;
@@ -26,7 +26,7 @@ public class RotateArrays{
   public static void rotate(int[] arr, int k){
     int n = arr.length;
     // the use of 'k' is to get the no.of rotation to be done
-    // using the remainder we will rotate the array
+    // using the remainder we will rotate the array by k times
     k = k % n;
 
     if(k < 0){
@@ -65,21 +65,14 @@ public class RotateArrays{
       end--;
     }
   }
-  
-  public static void traverseArray(int[] arr){
-    System.out.print("{");
-    for (int i = 0; i<arr.length; i++){
-      System.out.print(arr[i] + ", ");
-    }
-    System.out.println("}");
-  }
-  public static void main(String[] args){
-    RotateArrays obj = new RotateArrays();
 
-    int[] arr = {1,2,3,4,5};
+  public static void main(String[] args){
+//    RotateArrays obj = new RotateArrays();
+
+    int[] array = {1,2,3,4,5};
 
     // rotateOne(arr);
-    rotateArray(arr, 3);
-    traverseArray(arr);
+    rotateArray(array, 3);
+    PracticeArray.traverse(array);
   }
 }

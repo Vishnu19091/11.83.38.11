@@ -30,7 +30,7 @@ public class Basics {
       System.out.println((char)i);
     }
 
-    static void calcArea(double r){
+    static double calcArea(double r){
       return 3.14 * r * r;
     }
 

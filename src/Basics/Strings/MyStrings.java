@@ -1,3 +1,5 @@
+package Basics.Strings;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 public class MyStrings{

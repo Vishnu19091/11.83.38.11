@@ -1,4 +1,20 @@
+package DSA.Arrays.prblm_qn;
+
+import java.util.Scanner;
+
 public class FindElement {
+  static Scanner sc = new Scanner(System.in);
+  static int[] takeInp(){
+    System.out.println("Size: ");
+    int size = sc.nextInt();
+    System.out.println("Enter array elements: ");
+    int[] arr = new int[size];
+    for(int i = 0; i < size; i++){
+      arr[i]=sc.nextInt();
+    }
+
+    return arr;
+  }
   public static int missingElement(int[] arr){
     int n = arr.length;
     int sum1 = 0;
@@ -27,8 +43,8 @@ public class FindElement {
     //no duplicates
     //no need to be in sorted order
     //values should be in range
-    int[] arr = {1,2};
+    int[] arr = takeInp();
     int res = missingElement(arr);
-    System.out.println(res);
+    System.out.println("Missing Element -> " + res);
   }
 }

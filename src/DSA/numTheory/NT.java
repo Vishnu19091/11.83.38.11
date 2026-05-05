@@ -1,6 +1,40 @@
+package DSA.numTheory;
+
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class NT{
+  public static int reverseInt(int n){
+    int res = 0;
+    final int maxVal = Integer.MAX_VALUE;
+    final int minVal = Integer.MIN_VALUE;
+    while(n > 0){
+      int r = (n  % 10);
+
+      if(res > maxVal || res < minVal) return 0;
+
+      res = (res * 10) + r;
+      n /= 10;
+    }
+
+    return res;
+  }
+
+  public static boolean checkPalindromeNumber(int n){
+    if(reverseInt(n) == n) return true;
+    else return false;
+  }
+
+  public static boolean isPrime(int n){
+    for(int i = 2; i <= Math.sqrt(n); i++){
+      if(n % i == 0){
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   public static StringBuilder primeFactors(int n){
     StringBuilder sb = new StringBuilder();
 
@@ -73,6 +107,9 @@ public class NT{
     //}
     //System.out.println(sumAP(5,1,3));
     //System.out.println(gcd(15,81));
-    System.out.println(lcm(3,4));
+    //System.out.println(lcm(3,4));
+    //System.out.println(checkPalindromeNumber(1441));
+    ArrayList<Integer> res = reverseK(123);
+    for(int n : res) System.out.println(n);
   }
 }

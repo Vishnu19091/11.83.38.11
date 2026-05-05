@@ -1,3 +1,5 @@
+package Basics.OOPS;
+
 class Bicycle{
   // state or field or attributes
   // SYNTAX -> access_modifier type attribute_name;

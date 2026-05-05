@@ -138,7 +138,7 @@ public class DsaArrays {
     // int count = obj.removeDuplicates(arr3);
     reverseArrayInPlace(arr2);
     //System.out.println(arr2);
-    RotateArrays.traverseArray(arr3);
+//    RotateArrays.traverseArray(arr3);
   }
 }
 

@@ -1,9 +1,11 @@
 package DSA.Arrays.prblm_qn;
 
+import DSA.Arrays.PracticeArray;
+
 public class ProductOfArrays {
     /**
      * Brute Force Approach
-     * Time Complexity O(n*2) - for each element we iterating the array again
+     * Time Complexity O(n*2) - for each element we're iterating the array again
      * Space Complexity O(1)
      * This method takes Integer arrays
      * and performs multiplication of all elements
@@ -32,18 +34,18 @@ public class ProductOfArrays {
     }
 
      public int[] productExceptSelf(int[] nums) {
-        int n = nums.length;
-        int[] output = new int[n];
+        int size = nums.length;
+        int[] output = new int[size];
 
         // Initialize the output array with left products
         output[0] = 1;
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < size; i++) {
             output[i] = output[i - 1] * nums[i - 1];
         }
 
         // Calculate and multiply the right products
         int right = 1;
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = size - 1; i >= 0; i--) {
           output[i] *= right;
           right *= nums[i];
         }
@@ -56,7 +58,7 @@ public class ProductOfArrays {
         
         int[] res = ProdOfArray(prodArray);
 
-        // RotateArrays.traverseArray(res);
+         PracticeArray.traverse(res);
     }
 }
 

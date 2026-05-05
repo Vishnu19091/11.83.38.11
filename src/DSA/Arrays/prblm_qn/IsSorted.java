@@ -14,9 +14,9 @@ public class IsSorted{
     int[] arr = {1,2,3,4,5,6,7};
 
     boolean r = isSorted(arr);
-    traverseArray(arr);
-    reverse(arr,0,4);
-    traverseArray(arr);
+//    traverseArray(arr);
+//    reverse(arr,0,4);
+//    traverseArray(arr);
     System.out.println(r);
   }
 }

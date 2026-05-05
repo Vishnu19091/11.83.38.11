@@ -77,28 +77,6 @@ public class MyDemoArrays{
     }
   }
 
-  // traverse and display array of integer type
-  public void DisplayArray(int[] array){
-    int n = array.length;
-
-    for (int i = 0; i < n; i++) {
-        System.out.println(i+"->"+array[i]);
-    }
-
-    // System.out.println(Arrays.toString(arr));
-  }
-
-  public void StringArray(){
-    String[] arr = new String[4];
-
-    arr[0] = "String 1";
-    arr[1] = "String 2";
-    arr[2] = "String 3";
-    arr[3] = "String 4";
-
-    System.out.println(arr);
-  }
-
   public void MultiDimensionArray(){
     // we can even initialize array without columns(like matrix)
     // because each one is stored as a object with its own size
@@ -156,28 +134,14 @@ public class MyDemoArrays{
     System.out.println(list);
   }
 
-  public int[] ReturnArray(){
-    return new int[] {1,2,3,4,5,6,7,8,9,10};
-  }
-
-  public static int max(int[] arr){
-    int max = 0;
-
-    for(int i = 0; i<arr.length; i++){
-      if(arr[i] > max){
-        max = arr[i];
-      }
-    }
-
-    return max;
-  }
+  
   public static void main(String[] args){
     MyDemoArrays arrays=new MyDemoArrays();
 
     // arrays.PopulateArray();
     // arrays.DisplayArray();
 
-    int[] sumArrays=arrays.ReturnArray();
+//    int[] sumArrays=arrays.ReturnArray();
 
     // arrays.SumOfArrays(sumArrays);
 

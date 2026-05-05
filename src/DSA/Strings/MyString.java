@@ -32,7 +32,7 @@ public class MyString{
 
   /*
   Palindrome is nothing but if a string/number
-  is reversed and same as original is palindrome
+  is reversed and same as the original is palindrome
   */
   static boolean is_Palindrome (int n){
     if (n < 0) return false;

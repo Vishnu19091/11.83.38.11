@@ -32,7 +32,7 @@ public class SecondLargest{
     int[] arr = {12,35,1,10,34,129,11,123,122,124,126,130,100};
 
     int res = getSecondLargest(arr);
-    RotateArrays.traverseArray(arr);
+//    RotateArrays.traverseArray(arr);
 
     System.out.println(res);
   }
