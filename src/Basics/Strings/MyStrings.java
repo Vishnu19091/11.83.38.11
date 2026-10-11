@@ -2,8 +2,10 @@ package Basics.Strings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 public class MyStrings{
-  
+  public static Scanner sc = new Scanner(System.in);
+
   static void String(){
     String b = "vishnu";
     System.out.println(b);
@@ -105,6 +107,52 @@ public class MyStrings{
     String sb = new StringBuilder(s).reverse().toString();
     System.out.println(sb);
   }
+
+  public static void subString() {
+    String str = "KodNest";
+    for(int i = 0; i < str.length(); i++){
+      String temp = "";
+      for(int j = i; j < str.length(); j++){
+        temp = temp + str.charAt(j);
+        if(temp.equals("Kod")){
+          System.out.println(temp);
+          break;
+        }
+      }
+    }
+  }
+
+  public static void regExp(){
+    System.out.println("Enter some characters to run regExp check: ");
+    String str = sc.nextLine();
+
+    if(str.matches("[a-zA-Z0-9]*")){
+      System.out.println("Valid string!");
+    }
+    else {
+       System.out.println("Invalid String!");
+    }
+  }
+
+  public static void replaceAll(){
+    System.out.println("Enter String1, String2 and String3: ");
+    String str1 = sc.next();
+    String str2 = sc.next();
+    String str3 = sc.next();
+
+    String newstr1 = str1.replaceAll("[AEIOUaeiou]", "%");
+    System.out.println(newstr1);
+
+    String newstr2 = str2.replaceAll("[^AEIOUaeiou]", "#");
+    System.out.println(newstr2);
+
+    String newstr3 = str3.toUpperCase();
+    System.out.println(newstr3);
+
+    String result = newstr1+newstr2+newstr3;
+    System.out.println(result);
+  }
+
   public static void main(String[] args){
     //String();
     //comparison();
@@ -114,6 +162,12 @@ public class MyStrings{
     //StringtoCharArray("Hello");
     //strip("      Meow     ");
     //split("Hey Hello, this is Meow ");
-    System.out.println(isPalindrome("a"));
+//    System.out.println(isPalindrome("a"));
+//    subString();
+//    regExp();
+//    replaceAll();
+    String str = sc.nextLine();
+    String newstr = str.replaceAll("[' ']", "");
+    System.out.println(newstr);
   }
 }

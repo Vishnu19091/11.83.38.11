@@ -109,7 +109,7 @@ public class NT{
     //System.out.println(gcd(15,81));
     //System.out.println(lcm(3,4));
     //System.out.println(checkPalindromeNumber(1441));
-    ArrayList<Integer> res = reverseK(123);
-    for(int n : res) System.out.println(n);
+//    ArrayList<Integer> res = reverseK(123);
+//    for(int n : res) System.out.println(n);
   }
 }

@@ -47,6 +47,8 @@ public class Polymorphism {
         accessMethod(obj1);
 //        obj.disp1();
 //        obj.disp2();
+//        obj is of type of parent type reference
+//        so it is not allowed to call child specific methods
 //      obj.disp3();
 //        ((chil1d)(obj)).disp3();
         Par1 obj2 = new chil2d();

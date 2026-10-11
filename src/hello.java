@@ -73,7 +73,6 @@ public class hello {
     }
 
     static void PrimeRange(int start, int end){
-        
     }
 
     public static void main(String[] args) {

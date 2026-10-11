@@ -119,6 +119,42 @@ public class Characters{
     return sb.toString();
   }
 
+  public static String code(String s, int count){
+    StringBuilder sb = new StringBuilder(s.length());
+
+    for(int i = 0; i < s.length(); i++){
+      char ch = s.charAt(i);
+      if(ch == ' '){
+        sb.append(' ');
+      }else {
+      char r = (char)(ch + count);
+      sb.append(r);
+      }
+    }
+    sb.reverse();
+
+    return sb.toString();
+  }
+
+  public static String code1(String s){
+    StringBuilder sb = new StringBuilder(s.length());
+
+    for(int i = 0; i < s.length(); i++){
+      char ch = s.charAt(i);
+      if(ch == ' '){
+        sb.append(' ');
+      }else if(i % 2 == 0){
+        char r = (char)(ch + 2);
+        sb.append(r);
+      } else {
+        char r = (char) (ch - 3);
+        sb.append(r);
+      }
+    }
+
+    return sb.toString();
+  }
+
   public static void main(String[] args){
     // System.out.println((char)(int)('b'+1));
     // System.out.println((char)('c' - 'a'));
@@ -126,6 +162,7 @@ public class Characters{
 //    character();
 //    System.out.println(sortCharacters("qwertyuiopasdfghjklzxcvbnm"));
 //    System.out.println(removeAnagramCharacters("xyzpw", "lmno"));
-      System.out.println(changeCase("Take u Forward is Awesome"));
+//      System.out.println(changeCase("Take u Forward is Awesome"));
+    System.out.println(code1("BROUGHT"));
   }
 }

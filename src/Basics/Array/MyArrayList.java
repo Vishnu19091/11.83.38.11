@@ -23,7 +23,7 @@ public class MyArrayList {
                     iA.add(sc.nextInt());
                 }
                 System.out.println("Element in ArrayList");
-                MyList.traverseIA(iA);
+//                MyList.traverseIA(iA);
 
                 break;
 

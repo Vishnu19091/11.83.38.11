@@ -3,6 +3,12 @@ package Basics.Array;
 import java.util.Scanner;
 
 public class MyArrays {
+  public static void I(){
+    int[] arr = {1,2,3,4,5};
+    for(int i = arr.length-1; i >= 0; i--){
+      System.out.println(arr[i]);
+    }
+  }
     public static Scanner sc = new Scanner(System.in);
    
     public void StringArray(){
@@ -35,6 +41,7 @@ public class MyArrays {
   
 
   public static void main(String[] args) {
-      System.out.println("Works");
+//      System.out.println("Works");
+    I();
   }
 }
