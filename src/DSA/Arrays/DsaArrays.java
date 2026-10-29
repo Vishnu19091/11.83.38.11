@@ -1,6 +1,8 @@
 package DSA.Arrays;
 import DSA.Arrays.prblm_qn.RotateArrays;
 
+import java.util.Arrays;
+
 public class DsaArrays {
   public void moveZeroesTwoPass(int[] nums){
     int writePos = 0;
@@ -126,9 +128,10 @@ public class DsaArrays {
 
   public static void main(String[] args){
     DsaArrays obj = new DsaArrays();
-    int[] arr = {0,2,4,6,0,5,0,3,0,22,03};
-    // obj.moveZeroesTwoPass(arr);
-    obj.moveZeroesTP(arr);
+    int[] arr = {1,2,3,4,5,0};
+     obj.moveZeroesTwoPass(arr);
+//    obj.moveZeroesTP(arr);
+    System.out.println(Arrays.toString(arr));
 
     int[] arr2 = {2,2,1,1,3,2,3,3,3,3,3};
     int res = obj.majorityElementBruteForce(arr2);
@@ -136,7 +139,7 @@ public class DsaArrays {
     int[] arr3 = {1,1,2,2,2,3,3,4,4,5,6,6,7,8,8,9,9,9,10};
 
     // int count = obj.removeDuplicates(arr3);
-    reverseArrayInPlace(arr2);
+//    reverseArrayInPlace(arr2);
     //System.out.println(arr2);
 //    RotateArrays.traverseArray(arr3);
   }

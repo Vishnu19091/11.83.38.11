@@ -172,6 +172,6 @@ public class CountVowels {
 //        System.out.println(OMGStrings.remBrackets("(a+(b-c)*2)"));
 //        System.out.println(Capitalize.capitalizeFirst_Last_word("take u forward is awesome"));
 //        printDuplicates.printDupStr("sinstriiintng");
-//        printDuplicates.reverseWord("Take U Forward!");
+        printDuplicates.reverseWord("Take U Forward!");
     }
 }
