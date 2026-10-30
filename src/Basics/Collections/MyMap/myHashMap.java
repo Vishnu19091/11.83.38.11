@@ -29,7 +29,7 @@ public class myHashMap {
      */
     public static void searchContacts(HashMap<String, String> contacts, String query) {
         // Convert query to lowercase to ensure the search is case-insensitive
-        String lowerQuery = query.toLowease();
+        String lowerQuery = query.toLowerCase();
 
         // Filter the map entries for partial matches
         Map<String, String> matches = contacts.entrySet().stream()

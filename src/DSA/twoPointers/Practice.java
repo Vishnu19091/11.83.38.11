@@ -78,6 +78,31 @@ public class Practice {
         System.out.println(max);
     }
 
+    public static void squares(int[] arr){
+        int n= arr.length;
+        int[] res = new int[n];
+
+//        pointers
+        int l = 0;
+        int r = n-1;
+
+//        Starts loop from right
+        for(int i = n-1; i >=0; i--){
+            int lSqr = arr[l] * arr[l];
+            int rSqr = arr[r] * arr[r];
+
+            if(lSqr > rSqr){
+                res[i]=lSqr;
+                l++;
+            } else {
+                res[i]=rSqr;
+                r--;
+            }
+        }
+
+        System.out.println(Arrays.toString(res));
+    }
+
     public static void main(String[] args){
 
         int[] arr = {10,15,20,30,40,50};
@@ -85,6 +110,7 @@ public class Practice {
 
 //        findSum(arr, target);
 //        sort(new int[] {2,0,2,1,2,1,0,1,0});
-        containerWithMostWater(new int[] {3, 7, 6, 2, 6, 4, 8, 4, 9});
+//        containerWithMostWater(new int[] {3, 7, 6, 2, 6, 4, 8, 4, 9});
+        squares(new int[] {-4,-5,1,-2,8,3});
     }
 }
