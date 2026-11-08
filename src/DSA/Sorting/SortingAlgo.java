@@ -1,6 +1,7 @@
 package DSA.Sorting;
 import DSA.Arrays.PracticeArray;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SortingAlgo {
   public static void swap(int a, int b){
@@ -14,8 +15,8 @@ public class SortingAlgo {
       int comp = 0;
       int swaps = 0;
 
-      for(int i = n - 1; i >= 0; i--){
-        for(int j = 0; j <= i - 1; j++){
+      for(int i = 0; i <= n-2; i++){
+        for(int j = 0; j <= n-2-i; j++){
           comp++;
           if(arr[j] > arr[j+1]){
             int temp = arr[j+1];
@@ -25,13 +26,15 @@ public class SortingAlgo {
           }
         }
       }
+
+      System.out.print(Arrays.toString(arr));
       System.out.println("Compares: " + comp + ", Swaps: " + swaps);
     }
 
     public static void selectionSort(int[] arr){
       int n = arr.length;
 
-      for(int i = 0; i < n; i++){
+      for(int i = 0; i <= n-2; i++){
         int min = i;
 
         for(int j = i; j < n; j++){
@@ -42,6 +45,8 @@ public class SortingAlgo {
           }
         }
       }
+
+      System.out.println(Arrays.toString(arr));
     }
 
     public static void insertionSort(int[] arr){
@@ -101,10 +106,10 @@ public class SortingAlgo {
 
     public static void main(String[] args){
       int[] arr = {3,1,2};
-      //bubbleSort(arr);
-      //selectionSort(arr);
+//      bubbleSort(arr);
+      selectionSort(arr);
       //insertionSort(arr);
-      mergeSort(arr, 0, arr.length-1);
-      PracticeArray.traverse(arr);
+//      mergeSort(arr, 0, arr.length-1);
+//      PracticeArray.traverse(arr);
     }
 }
