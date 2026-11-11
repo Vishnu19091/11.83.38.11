@@ -40,13 +40,21 @@ public class SlidingWindow {
 		System.out.print(map.size() + " ");
 		for(int i = k; i < n; i++){
 			map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
-			if(map.get(arr[i-k]) > 0){
-				map.put(arr[i-k], map.get(arr[i-k])-1);
-			}
 			
-			if(map.get(arr[i-k]) == 0){
-				map.remove(arr[i-k]);
+			int old = arr[i-k];
+
+			if(map.get(old) > 0){
+
+				map.put(old, map.get(old)-1);
+
 			}
+
+			if(map.get(old) == 0){
+
+				map.remove(old);
+
+			}
+
 			System.out.print(map.size() + " ");
 		}
     }

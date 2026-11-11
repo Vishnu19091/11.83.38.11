@@ -3,6 +3,7 @@ package DSA.myStack;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class MyStack {
     public static Scanner sc = new Scanner(System.in);
@@ -11,9 +12,42 @@ public class MyStack {
 	    //closeBrackets();
         //remPairs();
 	//backspaceDel();
-	nxtGrtr();
+	//nxtGrtr();
+	nextWarmDayStack();
 	sc.close();
+ 	}
+    public static void nextWarmDay(){
+	int[] arr = {70, 60, 80};
+	int n = arr.length;
+	int[] res = new int[n];
+	for(int i = 0; i < n; i++){
+		for(int j = i; j < n; j++){
+			if(arr[j] > arr[i]){
+				res[i]=j-i;
+				break;
+			}
+		}
+	}
+	System.out.println(Arrays.toString(res));	
     }
+
+
+	public static void nextWarmDayStack(){
+		int[] arr = {70,60,80};
+
+		Deque<Integer> stack = new ArrayDeque<>();
+		int n = arr.length;
+		int[] res = new int[n];
+
+		for(int i = 0; i < n; i++){
+			while(!stack.isEmpty() && arr[i] > arr[stack.peek()]){
+				int j = stack.pop();
+				res[j] = i-j;
+			}
+			stack.push(i);
+		}
+		System.out.println(Arrays.toString(res));
+	}
     public static void declaration(){
 
         System.out.println("Enter input String to reverse:");

@@ -1,4 +1,6 @@
-import src.Basics.Array.*;
+package Basics.Array;
+
+//import src.Basics.Array.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 

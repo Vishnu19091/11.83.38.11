@@ -33,7 +33,27 @@ public class SWStr {
     }
 
     public static void main(String[] args) {
-        System.out.println(countVowelMax("Researching", 6));
-        System.out.println(countMaxWindow("Researching", 6));
+        //System.out.println(countVowelMax("Researching", 6));
+        //System.out.println(countMaxWindow("Researching", 6));
+	minWindow();
     }
+
+	public static void minWindow(){
+		String s = "ADOBECODEBANC";
+		String t = "ABC";
+		int left = 0, right = 0;
+		int[] freq = new int[256];
+
+		for(int i = 0; i < t.length(); i++) freq[s.charAt(i)]++;
+
+		for(int i =0; i < s.length(); i++){
+			freq[s.charAt(i)]++;
+			while(freq[s.charAt(i)] > 2){
+				freq[s.charAt(left)]--;
+				left++;
+			}
+			right=i;
+		}
+		System.out.println(s.substring(left, right));
+	}
 }
